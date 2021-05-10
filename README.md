@@ -40,18 +40,18 @@ LIMIT 1
 __Peacock__
 
 ### (c)
-SELECT ProductName FROM
-(SELECT * FROM Orders
-INNER JOIN OrderDetails
-ON Orders.OrderID = OrderDetails.OrderID
-INNER JOIN Products
-ON OrderDetails.ProductID = Products.ProductID
-INNER JOIN Customers
-ON Orders.CustomerID = Customers.CustomerID
-Where Customers.Country = "Germany") t1
-GROUP BY ProductID
-HAVING COUNT(*) > 1
-ORDER BY COUNT(*) DESC
+SELECT ProductName FROM  
+(SELECT * FROM Orders  
+INNER JOIN OrderDetails  
+ON Orders.OrderID = OrderDetails.OrderID  
+INNER JOIN Products  
+ON OrderDetails.ProductID = Products.ProductID  
+INNER JOIN Customers  
+ON Orders.CustomerID = Customers.CustomerID  
+Where Customers.Country = "Germany") t1  
+GROUP BY ProductID  
+HAVING COUNT(*) > 1  
+ORDER BY COUNT(*) DESC  
 LIMIT 1
 
 __Gorgonzola Telino__
