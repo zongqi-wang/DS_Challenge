@@ -15,6 +15,8 @@ Check the users’ spending habits, such as average number of sneakers they buy 
 If we continued to collect data, we would be able to track sales histories, such as sales growth of store, conversion rates of stores by checking if customers changed stores. If we had product ID we could track product sales performance. If we had location data of the shop we could track region performance and better understand customer conversion.
 
 ### (c)
+The value of this data set is that it allows us to model sales and predict future sales as to prevent overstocking.
+
 
 ## Question 2
 ### (a)
