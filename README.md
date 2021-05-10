@@ -18,29 +18,33 @@ If we continued to collect data, we would be able to track sales histories, such
 
 ## Question 2
 ### (a)
-
-`SELECT COUNT(*) FROM Orders  
-INNER JOIN Shippers  
-ON Orders.ShipperID = Shippers.ShipperID  
-WHERE Shippers.ShipperName = "Speedy Express"  `
+```
+  SELECT COUNT(*) FROM Orders  
+  INNER JOIN Shippers  
+  ON Orders.ShipperID = Shippers.ShipperID  
+  WHERE Shippers.ShipperName = "Speedy Express"  
+```
 
 __54__
 
 
 ### (b)
-`SELECT Employees.LastName FROM Orders  
-INNER JOIN Employees  
-ON Orders.EmployeeID = Employees.EmployeeID  
-GROUP BY Orders.EmployeeID  
-HAVING count(*) > 1  
-ORDER BY count(*) DESC  
-LIMIT 1  `
+```
+  SELECT Employees.LastName FROM Orders  
+  INNER JOIN Employees  
+  ON Orders.EmployeeID = Employees.EmployeeID  
+  GROUP BY Orders.EmployeeID  
+  HAVING count(*) > 1  
+  ORDER BY count(*) DESC  
+  LIMIT 1  
+```
 
 
 __Peacock__
 
 ### (c)
-`SELECT ProductName FROM  
+```
+SELECT ProductName FROM  
 (SELECT * FROM Orders  
 INNER JOIN OrderDetails  
 ON Orders.OrderID = OrderDetails.OrderID  
@@ -52,7 +56,8 @@ Where Customers.Country = "Germany") t1
 GROUP BY ProductID  
 HAVING COUNT(*) > 1  
 ORDER BY COUNT(*) DESC  
-LIMIT 1`
+LIMIT 1
+```
 
 __Gorgonzola Telino__
 
